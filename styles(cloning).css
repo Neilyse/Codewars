@@ -1,0 +1,85 @@
+
+head{background-color: greenyellow;
+}
+h1{background-color:greenyellow;
+color:white;}
+
+nav{
+    background-color:none;
+    padding: 15px;
+    text-align: right;
+    font-weight: 300;
+     position:fixed;
+     width: 100%;
+
+
+}
+a{
+    text-decoration: underline;
+    color: white;
+    margin-right:40px;}
+
+a:hover{
+    background-color:none;
+    color: greenyellow;
+    padding: 5px;
+}
+
+
+
+body{ background-image: url(slide_01\ \(1\).jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px;
+      margin: auto;}
+          
+      h2{ text-align: left;
+          color: white;
+           font-weight: 500;}
+      h3{text-align:left ;
+          color:greenyellow;
+           font-weight: 100; }
+      h4{text-align:left;
+          color: white;
+           font-weight: 500; 
+        padding-bottom: 2px;}
+       p{ font-size: medium;
+          text-align: left;
+          color: white;}
+
+       button{margin: auto;
+        float: center;
+        text-align: right ;
+        background-color: greenyellow;
+        color: white;
+        padding: 5px 10px;;
+        border :none;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 70px;
+        height: 20px;
+        } 
+       button:hover{ background-color: white;}
+          
+
+footer{ background-color: rgb(155, 230, 43);
+         margin-bottom: auto;
+         }
+         h5{text-decoration-color: white;
+           text-align: center;
+           font-weight: 200;}
+        p{text-align: center;
+          text-decoration-color: white;}
+          
+button{float: right ;
+        background-color: greenyellow;
+        color: white;
+        padding: auto;
+        border :none;
+        border-radius: 20px;
+        border-width: 200px;
+        border-color: rgb(228, 228, 194);
+        cursor: pointer;
+        } 
+       button:hover{ background-color: white;}
