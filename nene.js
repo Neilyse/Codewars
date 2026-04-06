@@ -145,5 +145,69 @@ switch (tier) {
   
 }
 
+// While loop
+let n = 1
+while(n <= 20){
+ if(n % 3 === 0 & n % 5 === 0){
+   console.log("JuliaJames") ;
+}
+  else if( n % 3 === 0){ 
+    console.log( "Julia");
+  }
+  else if (n % 5 === 0){
+    console.log ("James");
+  }
+  else{
+    console.log(n);
+  }
+ 
+  n = n + 1;
+
+}
 
 
+function laug(){
+var types = "hahahahahahahahahaha!"
+return types
+}
+console.log(laug());
+
+function laugh(num){
+  let  categories  ="";
+  
+  for(  let i = 0; i < num ; i++){
+     categories += "ha";
+  }
+  return categories + "!"; 
+}
+console.log (laugh(2))
+
+// variable shadowing
+
+let name = "Neila";  // outer variable
+
+function greet() {
+  let name = "Ishimwe";  // inner variable shadows outer one
+  console.log(name);     // prints "Ishimwe"
+}
+
+greet();
+console.log(name);
+     // prints "Neila"
+
+// Hoisting
+say("Jay");
+var saluation ;
+function say(name){
+   saluation = "salut";
+  console.log( saluation + name );
+
+}
+
+// array
+ var ran =[1,4,6,7,8,9];
+ var students =[ "Ishimwe", "Kayitare","Murungi"];
+ var math =[ "pi",3.14,true,undefined];
+// replace an element in array 
+ var ran =[1,4,6,7,8,9];
+ran[0]= 2;
