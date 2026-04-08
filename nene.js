@@ -205,9 +205,173 @@ function say(name){
 }
 
 // array
- var ran =[1,4,6,7,8,9];
- var students =[ "Ishimwe", "Kayitare","Murungi"];
+ 
+var students =[ "Ishimwe", "Kayitare","Murungi"];
  var math =[ "pi",3.14,true,undefined];
+ console.log(math);
 // replace an element in array 
  var ran =[1,4,6,7,8,9];
 ran[0]= 2;
+console.log(ran);
+console.log(ran[4]);
+console.log(ran.length);
+// array methods
+//push method
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
+donuts.push("powered");
+console.log(donuts);
+// pop method
+donuts.pop();
+console.log(donuts);
+
+//reverse method
+var fruits =[ "Banana","Watermelon","Apple","Pineapple","Mango","Orange"];
+fruits.reverse();
+console.log(fruits);
+
+// sort method
+
+// string
+fruits.sort()
+console.log(fruits);
+
+//numbers
+
+// ascending order
+var level =[1,2,0,8,7,9,5,3,6,4]
+level.sort(function(a,b){
+  return a-b;
+});
+console.log(level);
+// descending order
+level.sort(function(a,b){
+  return b-a;
+
+});
+console.log(level);
+
+// splice method
+donuts.splice(1,0,"cookies");
+console.log(donuts);
+donuts.splice(2,1,"hot chou");
+console.log(donuts);
+donuts.splice(donuts.length,1,"caramel");
+console.log(donuts);
+// array loops
+donuts[0] +="hoo";
+donuts[2] +="hoo";
+donuts[4] +="hoo";
+console.log(donuts);
+// for loop
+for(var i = 0; i < donuts.length ; i++){
+  donuts[i] += "hole";
+  donuts[i] = donuts[i].toUpperCase();
+}
+console.log(donuts);
+// For each loop
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4, 19, 300, 3775, 299, 36, 209, 148, 169, 299, 6, 109, 20, 58, 139, 59, 3, 1, 139];
+test.forEach(function(num,index,all){
+  if( num % 3 ===0){
+    test[index] = num + 100
+
+  }
+  else{ test [index]= num;
+
+  }
+});
+console.log(test);
+var college =["ulk","mku","alu","auca",];
+college.forEach(function(item, index,array){
+  college[index]+= "hole";
+    college[index] = college[index].toUpperCase();
+});
+console.log(college);
+// map method
+var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90, 29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
+var totals = bills.map(function(element){
+ return Number((element*1.15 ).toFixed(2));
+}
+      
+); console.log(totals);
+// Nested array
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+for (var i = 0  ; i < numbers.length;i++ ) {
+  for( var j = 0 ; j < numbers[i].length; j++) {
+  if (numbers[i][j] % 2 === 0){
+    numbers[i][j] = "even";
+  }
+    else{
+      numbers[i][j] = "odd";
+    }
+  }
+}
+console.log(numbers);
+
+// object
+var umbrella = {
+    color: "pink",
+    isOpen: true,
+    open: function() {
+        if (umbrella.isOpen === true) {
+            return "The umbrella is already opened!";
+        } else {
+            umbrella.isOpen = true;
+            return "Julia opens the umbrella!";
+        }
+    },
+    
+
+
+close:function(){
+    if (umbrella.isOpen === false){
+        return "The umbrella is already closed! ";
+        
+    }
+    else{ umbrella.isOpen = false
+          return "Julia closes the umbrella!";
+}
+},
+};
+console.log(umbrella.open());
+console.log(umbrella.close());
+
+// object method
+var breakfast ={name:"African",price: 12000 ,ingredients:["Eggs","Sugar","flour","Butter","Milk"]};
+console.log(breakfast.name);
+console.log(breakfast.price);
+console.log(breakfast.ingredients);
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+
+    deposit: function(amount) {
+        if (amount > 0) {
+            this.balance += amount;
+        }
+    },
+
+    withdraw: function(amount) {
+        var verifyBalance = this.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            this.balance -= amount;
+        }
+    },
+
+    printAccountSummary: function() {
+        return `Welcome!
+Your balance is currently $${this.balance} and your interest rate is ${this.interestRatePercent}%.`;
+    }
+};
+
+console.log(savingsAccount.printAccountSummary());
