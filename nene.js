@@ -216,22 +216,22 @@ console.log(ran);
 console.log(ran[4]);
 console.log(ran.length);
 // array methods
-//push method
+//push method : adding an element to the last position
 var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
 donuts.push("powered");
 console.log(donuts);
-// pop method
+// pop method: removing the last element 
 donuts.pop();
 console.log(donuts);
 
-//reverse method
+//reverse method : reversing the order 
 var fruits =[ "Banana","Watermelon","Apple","Pineapple","Mango","Orange"];
 fruits.reverse();
 console.log(fruits);
 
 // sort method
 
-// string
+// string: in alphabetical order
 fruits.sort()
 console.log(fruits);
 
@@ -250,7 +250,7 @@ level.sort(function(a,b){
 });
 console.log(level);
 
-// splice method
+// splice method:replacing at position adding and removing at a position
 donuts.splice(1,0,"cookies");
 console.log(donuts);
 donuts.splice(2,1,"hot chou");
@@ -286,10 +286,15 @@ college.forEach(function(item, index,array){
     college[index] = college[index].toUpperCase();
 });
 console.log(college);
+
+// substring : returns the selected indices
+let animal = "lion";
+let forest = animal.substring(0,2);
+console.log(forest);
 // map method
 var bills = [50.23, 19.12, 34.01, 100.11, 12.15, 9.90, 29.11, 12.99, 10.00, 99.22, 102.20, 100.10, 6.77, 2.22];
-var totals = bills.map(function(element){
- return Number((element*1.15 ).toFixed(2));
+var totals = bills.map(function(num){
+ return Number((num*1.15 ).toFixed(2));
 }
       
 ); console.log(totals);

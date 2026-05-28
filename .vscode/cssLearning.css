@@ -1,0 +1,39 @@
+.nav-list{
+    display: flex;/* for being vertical*/
+    flex-wrap: wrap; /* for wrapping each other */
+    gap :1rem;/* space btn items*/
+justify-content: flex-end;
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.nav-list li{
+    width: min-content;
+    flex-grow: 1;/* increase in size of each item to fill the space*/
+    flex-shrink:1;
+}
+.columns{
+    display: flex;
+     gap:2rem;
+      border: 10px solid firebrick;
+     
+}
+@media (min-width: 750px) {
+    
+
+      .columns{
+        flex-direction: column ;
+
+      }
+    }
+
+.card{
+    padding : 1rem;
+    background-color: cadetblue;
+}
+.columns>*{
+    
+    
+      flex-basis: 100%;
+        
+}

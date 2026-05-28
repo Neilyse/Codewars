@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">shopping</ul>
+    <script>
+        const shopping= document.getElementById('list')
+        let list1 = document.createElement('li')
+         list1.textContent='item1'
+
+        let list2 = document.createElement('li')
+        list2.textContent='item2'
+
+        let list3 = document.createElement('li')
+        list3.textContent='item3'
+
+         shopping.appendChild(list1)
+        shopping.appendChild(list2)
+        shopping.appendChild(list3)
+        
+</script>
+</body>
+</html>
