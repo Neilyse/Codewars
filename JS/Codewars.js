@@ -216,3 +216,92 @@ function countNumbers(input){
     },{})
 }
 console.log(countNumbers([1,2,[1,undefined],[2,0]],3,2,4,5,5))
+
+//Encrypt this
+function encryptThis(str) {
+
+  return str
+    .split(' ')
+    .map(word => {
+
+      // ASCII of first letter
+      let ascii = word.charCodeAt(0)
+
+      // remove first letter
+      let letters = word.slice(1).split('')
+
+      // swap first and last
+      if (letters.length > 1) {
+
+        [letters[0], letters[letters.length - 1]] =
+        [letters[letters.length - 1], letters[0]]
+      }
+
+      // combine
+      return ascii + letters.join('')
+    })
+    .join(' ')
+}
+//Decrypt this
+
+
+
+  let decipherThis = (str) => {
+
+  return str
+    .split(' ')
+    .map(word => {
+
+      // get number at beginning
+      let num = word.match(/\d+/)[0]
+
+      // convert number to letter
+      let firstLetter = String.fromCharCode(num)
+
+      // remove number from word
+      let letters = word.replace(num, '').split('')
+
+      // swap second and last letters
+      if (letters.length > 1) {
+        [letters[0], letters[letters.length - 1]] =
+        [letters[letters.length - 1], letters[0]]
+      }
+
+      return firstLetter + letters.join('')
+    })
+    .join(' ')
+}
+// printing errors
+const printerError= (a) => {
+    let errors = a.split('')
+  let count=0
+  for(let i=0; i< errors.length;i++){
+    if( errors[i]>"m"){
+      count++
+    }
+  }
+  return   `${count}/${errors.length}`
+  }
+
+  // class Person   
+
+  class Person {
+  constructor(firstName="John",lastName="Doe",age=0, gender="Male"){
+    
+  this.firstName=firstName
+  this.lastName=lastName
+  this.gender= gender
+  this.age=age
+    }
+  sayFullName()  { 
+   return`${this.firstName} ${this.lastName}`
+  } 
+
+
+static greetExtraTerrestrials(raceName) {
+   return `Welcome to Planet Earth ${raceName}`
+    }
+    
+  
+
+}
